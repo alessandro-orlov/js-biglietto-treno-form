@@ -1,0 +1,88 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GENERAL RULES */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background-color: #b91450;
+}
+
+.wrapper {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2em;
+  color: #fff;
+}
+
+section {
+  box-shadow: 3px 3px 12px #00000087; 
+}
+
+/* Ticket form data */
+.client-data-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.client-data-form > div {
+  width: calc(90% / 3)
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  color: #b91450;
+}
+
+input[type="text"] {
+  text-align: center;
+  padding: 5px 0;
+  border: 1px solid #b91450;
+  border-radius: 5px;
+  outline: none;
+}
+
+select {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid #b91450;
+}
+
+.buttons {
+  padding: 30px;
+}
+
+.buttons button {
+  border: none;
+  border: 1px solid #808080;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 0 10px;
+  color: #b91450;
+  font-weight: 600;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.buttons button:active {
+  background-color: #8b8b8b;
+  color: #fff;
+}
