@@ -1,24 +1,24 @@
-// Passenger form data
+// Passenger FORM data
 var formName = document.getElementById('form-name');
-console.log(formName.value)
-var generateTicket = document.getElementById('generate-ticket"')
+var distanceByTrain = document.getElementById('distance-by-train');
 
 
-
-
-//Ticket output
+//Ticket fields
 var ticketName = document.getElementById('ticket-name');
+var ticketPrice = document.getElementById('ticket-price');
 
 
-//Event that generate ticket
+//button
+var generateTicket = document.getElementById('generate-ticket-button');
+
+
+//Event that generate ticket output
 generateTicket.addEventListener('click',
   function(){
+    // Passenger Name
     ticketName.innerHTML = formName.value;
+
+    //Price based on km
+    ticketPrice.innerHTML = distanceByTrain.value * 0.21;
   }
 );
-
-//
-// addEventListener("click",
-// function(){
-//   document.getElementById("demo").innerHTML = "Hello World";
-// });
