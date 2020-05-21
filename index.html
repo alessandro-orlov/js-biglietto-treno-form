@@ -10,14 +10,14 @@
   <body>
     <main class="wrapper">
 
-      <!-- Begin user form data -->
-      <section id="user-form">
+      <!-- Begin Passenger form data -->
+      <section id="passenger-form">
         <h1>calcola il prezzo del tuo biglietto</h1>
-        <div class="user-data-form">
+        <div class="passenger-data-form">
 
-          <div class="clent-name">
+          <div class="passenger-name">
             <label>Nome Cognome</label>
-            <input type="text" value="">
+            <input id="form-name" type="text">
           </div>
 
           <div class="km-by-train">
@@ -25,7 +25,7 @@
             <input type="number" name="" value="">
           </div>
 
-          <div class="user-age-discount">
+          <div class="passenger-age-discount">
             <label>Fascia di et&agrave;</label>
             <select>
               <option value="">Maggiorenne</option>
@@ -35,8 +35,8 @@
           </div>
 
           <div class="buttons">
-            <button type="button" name="button">Genera</button>
-            <button type="button" name="button">Annunlla</button>
+            <button id="generate-ticket">Genera</button>
+            <button id="reset-form">Annunlla</button>
           </div>
 
         </div>
@@ -47,13 +47,13 @@
       <section id="ticket-output">
         <h2>Il tuo biglietto</h2>
 
-        <div class="user-ticket-output">
+        <div class="passenger-ticket-output">
           <h3>Dettagli passegeri</h3>
           <div class="output-details">
 
             <div class="ticket-data bg-grey">
               <div class="ticket-heading">Nome Passegeri</div>
-              <div id="passenger-name">&nbsp;</div>
+              <div id="ticket-name">&nbsp;</div>
             </div>
 
             <div class="ticket-data">

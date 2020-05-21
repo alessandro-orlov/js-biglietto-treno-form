@@ -30,8 +30,8 @@ section {
 
 }
 
-/* User form data */
-.user-data-form {
+/* passenger form data */
+.passenger-data-form {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -41,10 +41,10 @@ section {
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 3px 3px 12px #00000087;
-  color: #b91450;;
+  color: #b9145passenger
 }
 
-.user-data-form > div {
+.passenger-data-form > div {
   width: calc(90% / 3)
 }
 
@@ -90,12 +90,12 @@ select {
 }
 
 /* Ticket output */
-.user-ticket-output {
+.passenger-ticket-output {
   padding: 20px;
   background-color: #fff;
 }
 
-.user-ticket-output h3 {
+.passenger-ticket-output h3 {
   text-transform: uppercase;
 }
 
