@@ -41,7 +41,6 @@ section {
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 3px 3px 12px #00000087;
-  color: #b9145passenger
 }
 
 .passenger-data-form > div {
@@ -90,6 +89,14 @@ select {
 }
 
 /* Ticket output */
+#ticket-output.hidden {
+  display: none;
+}
+
+#ticket-output.visible {
+  display: block;
+}
+
 .passenger-ticket-output {
   padding: 20px;
   background-color: #fff;
@@ -102,11 +109,19 @@ select {
 .output-details {
   border-top: 1px solid #808080;
   border-bottom: 1px solid #808080;
-  height: 102px;
+  height: 100px;
 }
 
-.output-details .ticket-data {
+.ticket-data {
   display: inline-block;
+  position: relative;
+  height: 100px;
+}
+
+.ticket-data div:last-child {
+  position: absolute;
+  top: 50%;
+  left: 20px;
 }
 
 .ticket-heading {
@@ -117,14 +132,9 @@ select {
 
 .ticket-data.bg-grey {
   background-color: #808080;
+  height: 100%
 }
 
-.ticket-data.bg-grey .ticket-heading {
+.ticket-heading {
   font-size: 1.3em;
-  height:50px;
-}
-
-.output-details .ticket-data div {
-  height: 50px;
-  line-height: 50px;
 }

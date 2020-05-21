@@ -8,34 +8,42 @@ var resetFormButton = document.getElementById('reset-form');
 
 //Ticket fields
 var ticketName = document.getElementById('ticket-name');
-var showDiscound = document.getElementById('discount');
+var showDiscount = document.getElementById('discount');
 var carriage = document.getElementById('carriage');
 var codeCp = document.getElementById('code-cp');
 var finalPrice = document.getElementById('ticket-price');
-
+var showTheTicket = document.getElementById('ticket-output')
 
 //Event that generate ticket output
 generateTicketButton.addEventListener('click',
   function() {
+    //error empty field
+    if((formName.value == '') || (distanceByTrain.value == '')) {
+      alert('Errore: Non hai compilato tutti i campi!')
+    }
+
+    //Show the ticket
+    showTheTicket.className = 'visible';
+
     // Passenger Name
     ticketName.innerHTML = formName.value;
 
-    //Show applied discount
-    showDiscound.innerHTML = ageDiscount.value
+    //Generate random carriage number
+    carriage.innerHTML = Math.floor(Math.random() * 41);
 
-    //generate random carriage number
-    carriage.innerHTML = Math.floor(Math.random() * 46);
-
-    //generate random codeCP
+    //Generate random codeCP
     codeCp.innerHTML = Math.floor(Math.random() * 100001);
 
-    //Ticket price calculations
-    var ticketPrice = distanceByTrain.value * .21;
-    console.log(ticketPrice)
+    //Ticket price calculations & Discount message
+    var ticketPrice = (distanceByTrain.value * .21).toFixed(2);
     if(ageDiscount.value == 'junior') {
-      ticketPrice = ticketPrice - (ticketPrice * 0.2);
+      ticketPrice = (ticketPrice - (ticketPrice * 0.2)).toFixed(2);
+      showDiscount.innerHTML = 'Little Noob';
     } else if (ageDiscount.value == 'senior') {
-      ticketPrice = ticketPrice - (ticketPrice * 0.4);
+      ticketPrice = (ticketPrice - (ticketPrice * 0.4)).toFixed(2);
+      showDiscount.innerHTML = 'Old fart';
+    } else if(ageDiscount.value == 'standard') {
+      showDiscount.innerHTML = "Just pay"
     }
 
     //Show final price
@@ -50,8 +58,11 @@ resetFormButton.addEventListener('click',
     formName.value = '';
     ticketName.innerHTML = '';
 
-    //reset showDiscound
-    showDiscound.innerHTML = '';
+    //Hide the ticket
+    showTheTicket.className = 'hidden';
+
+    //Reset showDiscount
+    showDiscount.innerHTML = '';
 
     //reset fields distanceByTrain in the form & price in the ticket
     distanceByTrain.value = '';
@@ -61,7 +72,7 @@ resetFormButton.addEventListener('click',
     carriage.innerHTML = '';
     codeCp.innerHTML = '';
 
-    //reset ageDiscount field
+    //Reset ageDiscount field
     ageDiscount.value = 'standard';
   }
-)
+);
