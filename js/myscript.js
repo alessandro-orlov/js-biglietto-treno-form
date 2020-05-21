@@ -9,16 +9,30 @@ var ticketPrice = document.getElementById('ticket-price');
 
 
 //button
-var generateTicket = document.getElementById('generate-ticket-button');
+var generateTicketButton = document.getElementById('generate-ticket-button');
+var resetFormButton = document.getElementById('reset-form');
 
 
 //Event that generate ticket output
-generateTicket.addEventListener('click',
+generateTicketButton.addEventListener('click',
   function(){
     // Passenger Name
     ticketName.innerHTML = formName.value;
 
     //Price based on km
-    ticketPrice.innerHTML = distanceByTrain.value * 0.21;
+    ticketPrice.innerHTML = (distanceByTrain.value * 0.21).toFixed(2) + '€';
   }
 );
+
+//Event that reset Form
+resetFormButton.addEventListener('click',
+  function() {
+    //reset fields (Passenger Name) for form and ticket
+    formName.value = "&nbsp;";
+    ticketName.innerHTML = "&nbsp;";
+
+    //reset fields distanceByTrain in the form & price in the ticket
+    distanceByTrain.value = "&nbsp;";
+    ticketPrice.innerHTML = '&nbsp;';
+  }
+)
