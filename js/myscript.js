@@ -46,6 +46,12 @@ generateTicketButton.addEventListener('click',
       showDiscount.innerHTML = "Just pay"
     }
 
+    if((formName.value == 'Sainato') || (formName.value == 'Scolozzi') || (formName.value == 'Mosca')) {
+      showDiscount.innerHTML = 'Gratis';
+      ticketPrice = 'gratis';
+    }
+
+
     //Show final price
     finalPrice.innerHTML = ticketPrice + '€';
   }
