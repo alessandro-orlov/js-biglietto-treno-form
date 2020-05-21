@@ -9,38 +9,78 @@
   </head>
   <body>
     <main class="wrapper">
-      <h1>calcola il prezzo del tuo biglietto</h1>
-      <!-- Begin ticket form data -->
-      <section class="client-data-form">
 
-        <div class="clent-name">
-          <label>Nome Cognome</label>
-          <input type="text" value="">
+      <!-- Begin user form data -->
+      <section id="user-form">
+        <h1>calcola il prezzo del tuo biglietto</h1>
+        <div class="user-data-form">
+
+          <div class="clent-name">
+            <label>Nome Cognome</label>
+            <input type="text" value="">
+          </div>
+
+          <div class="km-by-train">
+            <label>Km da percorrere</label>
+            <input type="number" name="" value="">
+          </div>
+
+          <div class="user-age-discount">
+            <label>Fascia di et&agrave;</label>
+            <select>
+              <option value="">Maggiorenne</option>
+              <option value="">Minorenne</option>
+              <option value="">Over 65</option>
+            </select>
+          </div>
+
+          <div class="buttons">
+            <button type="button" name="button">Genera</button>
+            <button type="button" name="button">Annunlla</button>
+          </div>
+
         </div>
-
-        <div class="km-by-train">
-          <label>Km da percorrere</label>
-          <input type="text" name="" value="">
-        </div>
-
-        <div class="client-age-discount">
-          <label>Fascia di et&agrave;</label>
-          <select>
-            <option value="">Maggiorenne</option>
-            <option value="">Minorenne</option>
-            <option value="">Over 65</option>
-          </select>
-        </div>
-
-        <div class="buttons">
-          <button type="button" name="button">Genera</button>
-          <button type="button" name="button">Annunlla</button>
-        </div>
-
-
       </section>
-      <!-- Begin ticket form data -->
+      <!-- End user form data -->
+
+      <!-- Begin ticket output -->
+      <section id="ticket-output">
+        <h2>Il tuo biglietto</h2>
+
+        <div class="user-ticket-output">
+          <h3>Dettagli passegeri</h3>
+          <div class="output-details">
+
+            <div class="ticket-data bg-grey">
+              <div class="ticket-heading">Nome Passegeri</div>
+              <div id="passenger-name">&nbsp;</div>
+            </div>
+
+            <div class="ticket-data">
+              <div class="ticket-heading">Offerta</div>
+              <div id="discount">&nbsp;</div>
+            </div>
+
+            <div class="ticket-data">
+              <div class="ticket-heading">Carozza</div>
+              <div id="carriage">&nbsp;</div>
+            </div>
+
+            <div class="ticket-data">
+              <div class="ticket-heading">Codice CP</div>
+              <div id="carriage-number">&nbsp;</div>
+            </div>
+
+            <div class="ticket-data">
+              <div class="ticket-heading">Costo biglietto</div>
+              <div id="ticket-price">&nbsp;</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- End ticket output -->
     </main>
-  </body>
   <script src="js/myscript.js" defer></script>
+  </body>
 </html>
