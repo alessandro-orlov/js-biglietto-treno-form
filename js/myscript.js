@@ -52,7 +52,7 @@ generateTicketButton.addEventListener('click',
 
       //Special price for my mentors
       if((formName.value == 'Sainato') || (formName.value == 'sainato') || (formName.value == 'Scolozzi') || (formName.value == 'scolozzi') || (formName.value == 'Mosca') || (formName.value == 'Mosca')) {
-        showDiscount.innerHTML = 'Gratis';
+        showDiscount.innerHTML = 'Mentor';
         ticketPrice = 'Gratis';
       }
 
