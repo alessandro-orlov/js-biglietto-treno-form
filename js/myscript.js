@@ -82,3 +82,4 @@ resetFormButton.addEventListener('click',
     ageDiscount.value = 'standard';
   }
 );
+// END
