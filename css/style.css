@@ -60,6 +60,10 @@ input[type] {
   outline: none;
 }
 
+input:focus::placeholder {
+  color: #ccc;
+}
+
 input[type]:focus {
   background-color: #b91450;
   color: #fff;
