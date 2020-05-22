@@ -17,7 +17,7 @@ var showTheTicket = document.getElementById('ticket-output')
 //Event that generate ticket output
 generateTicketButton.addEventListener('click',
   function() {
-    //error empty field
+    //Error empty field
     if((formName.value == '') || (distanceByTrain.value == '')) {
       alert('Errore: Non hai compilato tutti i campi!')
     }
@@ -46,6 +46,7 @@ generateTicketButton.addEventListener('click',
       showDiscount.innerHTML = "Just pay"
     }
 
+    //Special price for my mentors
     if((formName.value == 'Sainato') || (formName.value == 'Scolozzi') || (formName.value == 'Mosca')) {
       showDiscount.innerHTML = 'Gratis';
       ticketPrice = 'gratis';
@@ -60,7 +61,7 @@ generateTicketButton.addEventListener('click',
 //Event that reset Form
 resetFormButton.addEventListener('click',
   function() {
-    //reset fields (Passenger Name) for form and ticket
+    //Reset fields (Passenger Name) for form and ticket
     formName.value = '';
     ticketName.innerHTML = '';
 
@@ -70,7 +71,7 @@ resetFormButton.addEventListener('click',
     //Reset showDiscount
     showDiscount.innerHTML = '';
 
-    //reset fields distanceByTrain in the form & price in the ticket
+    //Reset fields distanceByTrain in the form & price in the ticket
     distanceByTrain.value = '';
     finalPrice.innerHTML = '';
 
@@ -82,4 +83,3 @@ resetFormButton.addEventListener('click',
     ageDiscount.value = 'standard';
   }
 );
-// END
