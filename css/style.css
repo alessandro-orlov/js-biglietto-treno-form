@@ -69,11 +69,18 @@ input[type]:focus {
 
 select {
   width: 100%;
-  padding: 5px;
+  padding: 8px;
   border-radius: 5px;
   border: none;
   border: 1px solid #b91450;
 }
+
+select > option {
+  font-size: 16px;
+  color: #fff;
+  background-color: #b91450;
+}
+
 
 .buttons {
   margin-top: 30px;
@@ -89,6 +96,7 @@ select {
   font-weight: 600;
   background-color: #f1f1f1;
   cursor: pointer;
+  outline: none;
   }
 
 .buttons button:hover {
@@ -112,6 +120,7 @@ font-weight: 600;
 
 #ticket-name {
   color: #fff;
+  word-break: break-all;
 }
 
 #ticket-price {
