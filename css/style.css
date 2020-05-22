@@ -44,7 +44,7 @@ section {
 }
 
 .passenger-data-form > div {
-  width: calc(90% / 3)
+  width: 100%;
 }
 
 label {
@@ -54,13 +54,19 @@ label {
 
 input[type] {
   text-align: center;
-  padding: 5px 0;
+  padding: 8px 0;
   border: 1px solid #b91450;
   border-radius: 5px;
   outline: none;
 }
 
+input[type]:focus {
+  background-color: #b91450;
+  color: #fff;
+}
+
 select {
+  width: 171px;
   padding: 5px;
   border-radius: 5px;
   border: none;
@@ -68,27 +74,40 @@ select {
 }
 
 .buttons {
-  padding: 30px;
+  margin-top: 30px;
 }
 
 .buttons button {
   border: none;
   border: 1px solid #808080;
-  border-radius: 3px;
-  padding: 5px;
-  margin: 0 10px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 10px;
   color: #b91450;
   font-weight: 600;
   background-color: #f1f1f1;
   cursor: pointer;
-}
+  }
 
-.buttons button:active {
+.buttons button:hover {
   background-color: #8b8b8b;
   color: #fff;
 }
 
 /* Ticket output */
+#ticket-name, #ticket-price {
+font-size: 1.5em;
+font-weight: 600;
+}
+
+#ticket-name {
+  color: #fff;
+}
+
+#ticket-price {
+  color: lightgreen;
+}
+
 #ticket-output.hidden {
   display: none;
 }
@@ -109,11 +128,10 @@ select {
 .output-details {
   border-top: 1px solid #808080;
   border-bottom: 1px solid #808080;
-  height: 100px;
 }
 
 .ticket-data {
-  display: inline-block;
+  display: block;
   position: relative;
   height: 100px;
 }
@@ -132,9 +150,20 @@ select {
 
 .ticket-data.bg-grey {
   background-color: #808080;
-  height: 100%
 }
 
 .ticket-heading {
   font-size: 1.3em;
+}
+
+/* Media Query */
+@media all and (min-width: 768px) {
+  .passenger-data-form > div {
+    width: calc(90% / 3)
+  }
+
+  .ticket-data {
+    display: inline-block;
+  }
+
 }
