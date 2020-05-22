@@ -37,6 +37,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+  margin: 0 10px;
   padding: 20px;
   border-radius: 10px;
   background-color: #fff;
@@ -58,6 +59,7 @@ input[type] {
   border: 1px solid #b91450;
   border-radius: 5px;
   outline: none;
+  width: 100%;
 }
 
 input:focus::placeholder {
@@ -70,7 +72,7 @@ input[type]:focus {
 }
 
 select {
-  width: 171px;
+  width: 100%;
   padding: 5px;
   border-radius: 5px;
   border: none;
@@ -98,6 +100,14 @@ select {
   color: #fff;
 }
 
+#error-msg {
+  flex-basis: 100%;
+  margin-top: 20px;
+  color: #ff005d;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
 /* Ticket output */
 #ticket-name, #ticket-price {
 font-size: 1.5em;
@@ -112,17 +122,18 @@ font-weight: 600;
   color: lightgreen;
 }
 
-#ticket-output.hidden {
+.hidden {
   display: none;
 }
 
-#ticket-output.visible {
+.visible {
   display: block;
 }
 
 .passenger-ticket-output {
   padding: 20px;
   background-color: #fff;
+  margin: 0 10px 25px;
 }
 
 .passenger-ticket-output h3 {
@@ -165,6 +176,15 @@ font-weight: 600;
   .passenger-data-form > div {
     width: calc(90% / 3)
   }
+
+  input[type] {
+    width: auto;
+  }
+
+  select {
+    width: 171px;
+  }
+
 
   .ticket-data {
     display: inline-block;
